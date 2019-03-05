@@ -1,17 +1,17 @@
 **Todo List:**
 
 * Basic Communication:
-    * [ ] Sending
-        * [ ] Sending from text input
-    * [ ] Receiving 
+    * [x] Sending
+        * [x] Sending from text input
+    * [x] Receiving 
     
 * Control Commands
-    * [ ] `command`
-    * [ ] `takeoff`
-    * [ ] `land`
-    * [ ] `streamon`
-    * [ ] `streamoff`
-    * [ ] `emergency`
+    * [x] `command`
+    * [x] `takeoff`
+    * [x] `land`
+    * [x] `streamon`
+    * [x] `streamoff`
+    * [x] `emergency`
     * [ ] `up x`
     * [ ] `down x`
     * [ ] `left x`
@@ -24,16 +24,16 @@
     * [ ] `go x y z speed`
     * [ ] `curve x1 y1 z1 x2 y2 z2 speed`
 * Read Commands
-    * [ ] `speed?`
-    * [ ] `battery?`
-    * [ ] `time?`
-    * [ ] `height?`
-    * [ ] `temp?`
-    * [ ] `attitude?`
-    * [ ] `baro?`
-    * [ ] `acceleration?`
-    * [ ] `tof?`
-    * [ ] `wifi?`
+    * [x] `speed?`
+    * [x] `battery?`
+    * [x] `time?`
+    * [x] `height?`
+    * [x] `temp?`
+    * [x] `attitude?`
+    * [x] `baro?`
+    * [x] `acceleration?`
+    * [x] `tof?`
+    * [x] `wifi?`
 * Set Commands
     * [ ] `speed x`
     * [ ] `rc a b c d`

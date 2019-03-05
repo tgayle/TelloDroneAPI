@@ -74,7 +74,7 @@ class DroneConnection:
         """
         return await self.drone.send_command_and_await("tof?")
 
-    async def get_acceleration(self) -> (int, int, int):
+    async def get_acceleration(self) -> (float, float, float):
         """
         Returns drone acceleration as a tuple with each axis a separate entry.
         :return: (x_acceleration, y_acceleration, z_acceleration)

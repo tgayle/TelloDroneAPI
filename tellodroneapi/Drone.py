@@ -1,4 +1,5 @@
 from typing import Optional
+from abc import ABC, abstractmethod
 
 DroneResponse: Optional[str] = Optional[str]
 """
@@ -7,7 +8,7 @@ in case of direct responses from the drone, or None if there was an issue gettin
 """
 
 
-class Drone:
+class Drone(ABC):
     def __init__(self):
         self.connected = False
         self.silent_errors = False
@@ -22,12 +23,13 @@ class Drone:
     """
     A base class representing a drone. Implementations of Drones should be subclasses of this class.
     """
+    @abstractmethod
     async def connect(self) -> bool:
         """
         Attempts to connect to a drone device.
         :return: True if successfully connected, otherwise False
         """
-        raise RuntimeError("Connecting has not been implemented by this drone.")
+        pass
 
     def send_command(self, message: str, ignore_error=False) -> None:
         """
@@ -40,6 +42,7 @@ class Drone:
         if not self.silent_errors and not self.connected and not ignore_error:
             raise RuntimeError("This drone is not connected.")
 
+    @abstractmethod
     async def await_drone_response(self, timeout: int) -> DroneResponse:
         """
         Waits for a response from the drone to verify a command has been received, optionally timing
@@ -49,6 +52,7 @@ class Drone:
         """
         pass
 
+    @abstractmethod
     async def send_command_and_await(self, message: str, timeout: int = None) -> DroneResponse:
         """
         Combines send_command and await_drone_response into one method, accepting a timeout length
